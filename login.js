@@ -1,12 +1,17 @@
-let nome = document.getElementById("name")
-let cognome = document.getElementById("surname")
-let data = document.getElementById("dataNascita")
-let loginButton = document.getElementById("loginButton")
+const nome = document.getElementById("name")
+const cognome = document.getElementById("surname")
+const data = document.getElementById("dataNascita")
+const loginButton = document.getElementById("loginButton")
 
-let dati = (ev) => {
+const dati = (ev) => {
   let table = document.querySelector("table")
-  table.innerHTML += `   <tr>
-    <td>${nome.value + " " + cognome.value + " " + data.value}</td>
+  table.innerHTML += `   <tr onclick = "fatto(event)">
+    <td>${
+      nome.value + " " + cognome.value + " " + data.value
+    } <i class="fa-solid fa-trash" ></i></td>
   </tr>
-       `
+     `
+}
+const fatto = (e) => {
+  e.target.remove()
 }
