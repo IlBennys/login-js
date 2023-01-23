@@ -3,6 +3,12 @@ const cognome = document.getElementById("surname")
 const data = document.getElementById("dataNascita")
 const loginButton = document.getElementById("loginButton")
 
+const Utente = function (nome, cognome, data) {
+  this.nome = nome
+  this.cognome = cognome
+  this.data = data
+}
+
 const dati = (ev) => {
   let table = document.querySelector("table")
   table.innerHTML += `   <tr >
@@ -11,20 +17,10 @@ const dati = (ev) => {
     } <i class="fa-solid fa-trash" onclick = "fatto(event)" ></i></td>
   </tr>
      `
+  const giova = new Utente(nome.value, cognome.value, data.value)
+  console.log(giova)
 }
 const fatto = (e) => {
   e.stopPropagation()
   e.target.parentElement.parentElement.remove()
 }
-
-// const Utente = function (nome, cognome) {
-//   this.nome = nome
-//   this.cognome = cognome
-// }
-// let fabri = new Utente("fabbrizio", "angelo")
-// Utente.prototype.cibo = "mela"
-// console.log(fabri)
-
-// let gabri = new Utente("gabriele", "d'annunzio")
-// Utente.prototype.cibo = "pera"
-// console.log(gabri)
