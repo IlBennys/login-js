@@ -5,15 +5,16 @@ const loginButton = document.getElementById("loginButton")
 
 const dati = (ev) => {
   let table = document.querySelector("table")
-  table.innerHTML += `   <tr onclick = "fatto(event)">
+  table.innerHTML += `   <tr >
     <td>${
       nome.value + " " + cognome.value + " " + data.value
-    } <i class="fa-solid fa-trash" ></i></td>
+    } <i class="fa-solid fa-trash" onclick = "fatto(event)" ></i></td>
   </tr>
      `
 }
 const fatto = (e) => {
-  e.target.remove()
+  e.stopPropagation()
+  e.target.parentElement.parentElement.remove()
 }
 
 // const Utente = function (nome, cognome) {
