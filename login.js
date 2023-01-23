@@ -15,3 +15,15 @@ const dati = (ev) => {
 const fatto = (e) => {
   e.target.remove()
 }
+
+// const Utente = function (nome, cognome) {
+//   this.nome = nome
+//   this.cognome = cognome
+// }
+// let fabri = new Utente("fabbrizio", "angelo")
+// Utente.prototype.cibo = "mela"
+// console.log(fabri)
+
+// let gabri = new Utente("gabriele", "d'annunzio")
+// Utente.prototype.cibo = "pera"
+// console.log(gabri)
