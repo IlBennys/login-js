@@ -19,6 +19,11 @@ const dati = (ev) => {
      `
   const giova = new Utente(nome.value, cognome.value, data.value)
   console.log(giova)
+  let utenza = []
+  dati.nome = nome.value
+  dati.cognome = cognome.value
+  dati.data = data.value
+  console.log(utenza)
 }
 const fatto = (e) => {
   e.stopPropagation()
